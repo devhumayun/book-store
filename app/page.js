@@ -13,7 +13,7 @@ export default function Home() {
         style={{ objectFit: "cover" }}
         className="blur-sm "
       />
-      <div className="bg-white flex flex-col justify-center items-center z-10 rounded-md lg:w-1/3 p-10">
+      <div className="bg-white flex flex-col justify-center items-center z-10 rounded-md lg:w-1/4 p-10">
         <div className="flex items-center gap-4">
           <SparklesIcon className="w-10 h-10 text-purple-700" />
           <span className="text-3xl text-purple-700 font-medium">
