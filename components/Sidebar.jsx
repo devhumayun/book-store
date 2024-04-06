@@ -4,7 +4,7 @@ import NavLinks from './Navlinks';
 
 const Sidebar = () => {
     return (
-        <div className='p-4'>
+        <div className='p-2 lg:w-[300px]'>
             <div className='bg-purple-700 p-1 rounded-md mb-4'>
                 <Logo />
             </div>
@@ -14,7 +14,7 @@ const Sidebar = () => {
 
                     <button className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-purple-600 md:flex-none md:justify-start md:p-2 md:px-3">
                         <CiLogout className="w-6 size-8" />
-                        <p className="hidden md:block pr-10">Sign out</p>
+                        <p className="hidden md:block pr-32">Sign out</p>
                     </button>
                 </form>
             </div>

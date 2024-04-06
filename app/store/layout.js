@@ -2,9 +2,9 @@ import Sidebar from "@/components/Sidebar";
 
 const StoreLayout = ({ children }) => {
   return (
-    <div className="flex flex-col lg:flex-row xl:flex-row min-h-screen 2xl:flex-row">
+    <div className="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row">
       <Sidebar />
-      <div className="">{children}</div>
+      <div className="flex flex-wrap justify-center w-full">{children}</div>
     </div>
   );
 };

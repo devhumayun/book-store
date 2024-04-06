@@ -1,5 +1,7 @@
+import BooksList from "@/components/book/BooksList";
+
 const BookListPage = () => {
-  return <div>BookListPage</div>;
+  return <BooksList />;
 };
 
 export default BookListPage;
