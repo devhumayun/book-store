@@ -1,4 +1,5 @@
-
+"use client"
+import { StoreContext } from "@/context";
 import {
     BookOpenIcon,
     CogIcon,
@@ -12,6 +13,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 import Link from "next/link";
+import { useContext } from "react";
 
 const links = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -26,6 +28,7 @@ const links = [
 ]
 
 const NavLinks = () => {
+    const { cartData } = useContext(StoreContext)
     return (
         <>
             {
@@ -38,7 +41,10 @@ const NavLinks = () => {
                             className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-purple-600 md:flex-none md:justify-start md:p-2 md:px-3"
                         >
                             <IconComponent className="w-6" />
-                            <p className="hidden md:block">{link.name}</p>
+                            {
+                                (link.name === "Cart" && cartData && cartData.length > 0 ? `${link.name} (${cartData.length})` : <p className="hidden md:block">{link.name}</p>)
+                            }
+
                         </Link>
                     )
                 })
